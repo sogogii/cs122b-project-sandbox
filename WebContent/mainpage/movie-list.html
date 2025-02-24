@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Movie List</title>
+</head>
+
+<body>
+    <div>
+        <button id="go_to_cart" class="btn btn-warning">🛒 Go to Cart</button>
+    </div>
+
+    <h1>Top Rated Movies</h1>
+
+    <form id="search_form"></form>
+
+    <form id="sorting">
+        <table>
+            <tr>
+                <th>Sort by title</th>
+                <th>Sort by rating</th>
+                <th>Ascending Order</th>
+                <th>Descending Order</th>
+
+                <th>
+                    <label for="page_limit">Page Limit</label>
+                    <select name="page_limit" id="page_limit">
+                        <option value="10">10</option>
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th><input type="radio" name="sort_input" value="title" checked></th>
+                <th><input type="radio" name="sort_input" value="rating"></th>
+                <th><input type="radio" name="order_input" value="ASC"></th>
+                <th><input type="radio" name="order_input" value="DESC" checked></th>
+            </tr>
+        </table>
+    </form>
+
+    <table id="movie_list_table" class="table table-striped">
+        <thead>
+        <tr>
+            <!-- Titles of each column -->
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Genres</th>
+            <th>Stars</th>
+            <th>Rating</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="movie_list_table_body"></tbody>
+    </table>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="movie-list.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
